@@ -206,111 +206,11 @@ class FoodItem extends StatelessWidget {
             //   width: 200,
             // ),
           
-            // Container(
-            //   height: 36,
-            //   width: 100,
-            //   decoration: BoxDecoration(
-            //       gradient: LinearGradient(
-            //       begin: Alignment.topLeft,
-            //       end: Alignment.bottomLeft,
-
-            //       colors:[
-            //         Colors.greenAccent,
-            //         Colors.lightGreen,
-            //       ]
-
-            //     ),
-            //     borderRadius: BorderRadius.all(
-            //       Radius.circular(33),
-            //     ),
-            //   ),
-            //   child: Padding(
-            //     padding: const EdgeInsets.symmetric(horizontal: 8.0),
-            //     child: Row(
-            //       crossAxisAlignment: CrossAxisAlignment.center,
-            //       mainAxisAlignment: MainAxisAlignment.spaceAround,
-            //       children: [
-            //         GestureDetector(
-            //           onTap: () {
-            //             Provider.of<AllOrder>(context, listen: false)
-            //                 .decreaseAmountOfFood();
-            //           },
-            //           child: Icon(
-            //             Icons.remove,
-            //             size: 21,
-            //             color: Colors.grey[900],
-            //           ),
-            //         ),
-            //         SizedBox(
-            //           width: 3,
-            //         ),
-            //         Consumer<AllOrder>(
-            //             builder: (context, numbersOfOrders, child) {
-            //           return Text(
-            //             numbersOfOrders.amountOfFood.toString(),
-            //             style: TextStyle(
-            //               fontWeight: FontWeight.w600,
-            //               fontSize: 18,
-            //               color: Colors.grey[900],
-            //             ),
-            //           );
-            //         }),
-            //         SizedBox(
-            //           width: 0,
-            //         ),
-            //         GestureDetector(
-            //           onTap: () {
-            //             Provider.of<AllOrder>(context,listen: false)
-            //                 .increaseAmountOfFood();
-            //           },
-            //           child: Icon(
-            //             Icons.add,
-            //             size: 21,
-            //             color: Colors.grey[900],
-            //           ),
-            //         ),
-            //       ],
-            //     ),
-            //   ),
-            // ),
-           SizedBox(
-             height: 20,
-           ),
-            Column(
-              children: [
-                Stack(
-                  clipBehavior: Clip.none,
-                   children: [
-
-
-
-                    
-
-
-
-
-
-                     Container(
-                    height: MediaQuery.of(context).size.height/2.10,
-                  // height: 260,
-                      decoration: BoxDecoration(
-                      borderRadius:BorderRadius.only(topLeft: Radius.circular(12.0),
-                      topRight: Radius.circular(12.0),
-                      ),
-                    
-                        color: Colors.white,
-                      ),
-                    child: Column(
-                      children: [
-              Positioned( 
-                    top:110,
-
-                    child: Container(
-                      
-                  height: 36,
-                  width: 120,
-                  decoration: BoxDecoration(
-                      gradient: LinearGradient(
+            Container(
+              height: 36,
+              width: 100,
+              decoration: BoxDecoration(
+                  gradient: LinearGradient(
                   begin: Alignment.topLeft,
                   end: Alignment.bottomLeft,
 
@@ -332,27 +232,27 @@ class FoodItem extends StatelessWidget {
                   children: [
                     GestureDetector(
                       onTap: () {
-                          Provider.of<AllOrder>(context, listen: false)
-                              .decreaseAmountOfFood();
+                        Provider.of<AllOrder>(context, listen: false)
+                            .decreaseAmountOfFood();
                       },
                       child: Icon(
-                          Icons.remove,
-                          size: 21,
-                          color: Colors.grey[900],
+                        Icons.remove,
+                        size: 21,
+                        color: Colors.grey[900],
                       ),
                     ),
                     SizedBox(
                       width: 3,
                     ),
                     Consumer<AllOrder>(
-                          builder: (context, numbersOfOrders, child) {
+                        builder: (context, numbersOfOrders, child) {
                       return Text(
-                          numbersOfOrders.amountOfFood.toString(),
-                          style: TextStyle(
-                            fontWeight: FontWeight.w600,
-                            fontSize: 18,
-                            color: Colors.grey[900],
-                          ),
+                        numbersOfOrders.amountOfFood.toString(),
+                        style: TextStyle(
+                          fontWeight: FontWeight.w600,
+                          fontSize: 18,
+                          color: Colors.grey[900],
+                        ),
                       );
                     }),
                     SizedBox(
@@ -360,197 +260,205 @@ class FoodItem extends StatelessWidget {
                     ),
                     GestureDetector(
                       onTap: () {
-                          Provider.of<AllOrder>(context,listen: false)
-                              .increaseAmountOfFood();
+                        Provider.of<AllOrder>(context,listen: false)
+                            .increaseAmountOfFood();
                       },
                       child: Icon(
-                          Icons.add,
-                          size: 21,
-                          color: Colors.grey[900],
+                        Icons.add,
+                        size: 21,
+                        color: Colors.grey[900],
                       ),
                     ),
                   ],
                 ),
               ),
             ),
-        ),
-
-
-                  //       SizedBox(
-                  //   height:18,
-                  // ),
-                        Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 0.0),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceAround,
-                            children: [
-                              Container(
-                                width: 225,
-                                child: Text(
-                                  itemOfFood.describeFood,
-                                  style: TextStyle(
-                                      fontSize: 18, fontWeight: FontWeight.w600),
-                                ),
-                              ),
-                              RichText(
-                                text: TextSpan(children: [
-                                  TextSpan(
-                                    text: '\$',
-                                    style: TextStyle(
-                                      fontSize: 15,
-                                      fontWeight: FontWeight.bold,
-                                      color: Colors.black87,
-                                    ),
-                                  ),
-                                  TextSpan(
-                                    text: itemOfFood.price,
-                                    style: TextStyle(
-                                      fontSize: 15,
-                                      fontWeight: FontWeight.w600,
-                                      color: Colors.black,
-                                    ),
-                                  ),
-                                ]),
-                              ),
-                            ],
-                          ),
-                        ),
-                        SizedBox(
-                          height:21,
-                        ),                                            
-                        Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 32.0),
-                          child: Align(
-                            alignment: Alignment.centerLeft,
-                            child: Text(
-                              'Ingredients :',
-                              style:
-                                  TextStyle(fontSize:18,fontWeight: FontWeight.w600,),
-                            ),
-                          ),
-                        ),
-                        SizedBox(
-                          height: 18,
-                        ),
-
-
-                        Column(
-                   children: [
-                     //Center(
-                        Padding(
-                         padding:  EdgeInsets.only(left: 21.0),
-                         child:
-                           Container(
-                      //         decoration:BoxDecoration(
-                      //   borderRadius:BorderRadius.circular(20.0),
-                      //   color: Colors.teal,
-                      // ),
-                      
-                            height: 48,
-                           
-                            child: ListView.builder(
-                                
-                                itemCount: ingredients.length,
-                               scrollDirection: Axis.horizontal,
-                               
-                                itemBuilder: (context, i) {
-                                  return Consumer<AllOrder>(
-                                      builder: (context, numbersOfOrders, child) {
-                                    return GestureDetector(
-                                      onTap: () {
-                                        numbersOfOrders.setSelectedIndex(i);
-                                      },
-                                      child: Padding(
-                                        padding: EdgeInsets.all(7.0),
-                                        child: Container(
-                                          decoration: BoxDecoration(
-                                            boxShadow: [
-                                              BoxShadow(
-                                                color: Colors.grey,
-                                                // spreadRadius: 2,
-                                                blurRadius: 3,
-                                                offset: Offset(0.0, 3.0),
-                                              )
-                                            ],
-                                            color: numbersOfOrders.selectedIndexOfMenuList != null &&
-                                                numbersOfOrders.selectedIndexOfMenuList == i ? Colors.greenAccent[400] : Colors.white,
-                                            // border: Border.all(
-                                            //   color: Colors.teal[900],
-                                            // ),
-                                            borderRadius: BorderRadius.all(
-                                              Radius.circular(120),
-                                            ),
-                                          ),
-                                          child: Padding(
-                                            padding:  EdgeInsets.all(6.0),
-                                            child: Center(
-                                              child: Text(
-                                                ingredients[i],
-                                                style: TextStyle(fontSize: 15),
-                                              ),
-                                            ),
-                                          ),
-                                        ),
-                                      ),
-                                    );
-                                  });
-                                }),
-                          ),
-                                  // ),
-                                ),
-                              ],
-                      ),
-
-
-
-
-
-                        // Padding(
-                        //   padding: const EdgeInsets.symmetric(horizontal: 32.0),
-                        //   child: Align(
-                        //     alignment: Alignment.centerLeft,
-                        //     child: Text(
-                        //       itemOfFood.ingredients,
-                        //       style: TextStyle(
-                        //           fontSize: 36,
-                        //           fontWeight: FontWeight.w600,
-                        //           color: Colors.grey[500]),
-                        //     ),
-                        //   ),
-                        // ),
-                        SizedBox(
-                          height: 27,
-                        ),
-                          Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 32.0),
-                          child: Align(
-                            alignment: Alignment.centerLeft,
-                            child: Text(
-                              'Details',
-                              style: TextStyle(
-                                fontWeight: FontWeight.w600,
-                                fontSize: 18,
-                              ),
-                            ),
-                          ),
-                        ),
-                        SizedBox(
-                          height: 18,
-                        ),
-
-                        Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 32.0),
+            SizedBox(
+              height:0,
+            ),
+            Container(
+              height: MediaQuery.of(context).size.height/2.19,
+            // height: 260,
+                decoration: BoxDecoration(
+                borderRadius:BorderRadius.only(topLeft: Radius.circular(12.0),
+                topRight: Radius.circular(12.0),
+                ),
+              
+                  color: Colors.white,
+                ),
+              child: Column(
+                children: [
+                  SizedBox(
+              height:18,
+            ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 0.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        Container(
+                          width: 225,
                           child: Text(
-                            itemOfFood.details,
-                            style: TextStyle(fontSize: 16, color: Colors.grey[400]),
+                            itemOfFood.describeFood,
+                            style: TextStyle(
+                                fontSize: 18, fontWeight: FontWeight.w600),
                           ),
+                        ),
+                        RichText(
+                          text: TextSpan(children: [
+                            TextSpan(
+                              text: '\$',
+                              style: TextStyle(
+                                fontSize: 15,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.black87,
+                              ),
+                            ),
+                            TextSpan(
+                              text: itemOfFood.price,
+                              style: TextStyle(
+                                fontSize: 15,
+                                fontWeight: FontWeight.w600,
+                                color: Colors.black,
+                              ),
+                            ),
+                          ]),
                         ),
                       ],
                     ),
                   ),
-                  ],
-                ),
-              ],
+                  SizedBox(
+                    height:21,
+                  ),                                            
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 32.0),
+                    child: Align(
+                      alignment: Alignment.centerLeft,
+                      child: Text(
+                        'Ingredients :',
+                        style:
+                            TextStyle(fontSize:18,fontWeight: FontWeight.w600,),
+                      ),
+                    ),
+                  ),
+                  SizedBox(
+                    height: 18,
+                  ),
+
+
+                  Column(
+             children: [
+               //Center(
+                  Padding(
+                   padding:  EdgeInsets.only(left: 21.0),
+                   child:
+                     Container(
+                //         decoration:BoxDecoration(
+                //   borderRadius:BorderRadius.circular(20.0),
+                //   color: Colors.teal,
+                // ),
+                
+                      height: 48,
+                     
+                      child: ListView.builder(
+                          
+                          itemCount: ingredients.length,
+                         scrollDirection: Axis.horizontal,
+                         
+                          itemBuilder: (context, i) {
+                            return Consumer<AllOrder>(
+                                builder: (context, numbersOfOrders, child) {
+                              return GestureDetector(
+                                onTap: () {
+                                  numbersOfOrders.setSelectedIndex(i);
+                                },
+                                child: Padding(
+                                  padding: EdgeInsets.all(7.0),
+                                  child: Container(
+                                    decoration: BoxDecoration(
+                                      boxShadow: [
+                                        BoxShadow(
+                                          color: Colors.grey,
+                                          // spreadRadius: 2,
+                                          blurRadius: 3,
+                                          offset: Offset(0.0, 3.0),
+                                        )
+                                      ],
+                                      color: numbersOfOrders.selectedIndexOfMenuList != null &&
+                                          numbersOfOrders.selectedIndexOfMenuList == i ? Colors.greenAccent[400] : Colors.white,
+                                      // border: Border.all(
+                                      //   color: Colors.teal[900],
+                                      // ),
+                                      borderRadius: BorderRadius.all(
+                                        Radius.circular(120),
+                                      ),
+                                    ),
+                                    child: Padding(
+                                      padding:  EdgeInsets.all(6.0),
+                                      child: Center(
+                                        child: Text(
+                                          ingredients[i],
+                                          style: TextStyle(fontSize: 15),
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              );
+                            });
+                          }),
+                    ),
+                 // ),
+               ),
+             ],
+           ),
+
+
+
+
+
+                  // Padding(
+                  //   padding: const EdgeInsets.symmetric(horizontal: 32.0),
+                  //   child: Align(
+                  //     alignment: Alignment.centerLeft,
+                  //     child: Text(
+                  //       itemOfFood.ingredients,
+                  //       style: TextStyle(
+                  //           fontSize: 36,
+                  //           fontWeight: FontWeight.w600,
+                  //           color: Colors.grey[500]),
+                  //     ),
+                  //   ),
+                  // ),
+                  SizedBox(
+                    height: 27,
+                  ),
+                    Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 32.0),
+                    child: Align(
+                      alignment: Alignment.centerLeft,
+                      child: Text(
+                        'Details',
+                        style: TextStyle(
+                          fontWeight: FontWeight.w600,
+                          fontSize: 18,
+                        ),
+                      ),
+                    ),
+                  ),
+                  SizedBox(
+                    height: 18,
+                  ),
+
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 32.0),
+                    child: Text(
+                      itemOfFood.details,
+                      style: TextStyle(fontSize: 16, color: Colors.grey[400]),
+                    ),
+                  ),
+                ],
+              ),
             )
           ],
         ),

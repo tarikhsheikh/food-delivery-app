@@ -53,7 +53,7 @@ class HomePage extends StatelessWidget {
                   drawerList( icon:Icons.auto_awesome, name: 'About',),
                   Divider(color:Colors.white,thickness: 2,),
                   ListTile(leading: Text("Contact Us",style: TextStyle(fontSize: 16,color:Colors.black))),
-                  drawerList( icon:Icons.password, name: 'Change',),
+                  drawerList( icon:Icons.access_alarm, name: 'Change',),
                   drawerList( icon:Icons.logout, name: 'LogOut',),
               ],
             ),
